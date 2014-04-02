@@ -36,13 +36,66 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/label_calculate" />
+
+        <Button
+            android:id="@+id/diner_buttonClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_clear" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/border_container"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/button_container"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/label_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_taxp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/input_tax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="@string/label_itemCost"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="@string/label_0.00" />
+        
+        <TextView
+            android:id="@+id/label_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_tipp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/input_tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="@string/label_itemCost"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="@string/label_0.00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/border_container2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/border_container"
         android:background="#000000"
         android:padding="2dp" >
 
@@ -63,6 +116,5 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
 
 </RelativeLayout>
